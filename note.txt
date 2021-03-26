@@ -1,0 +1,20 @@
+Le nom d'une classe à toujours une majuscule (ici Ecole.php) le fichier prend toujours une maj à la 1ere lettre 
+La première lettre de chaque mot est en majuscule "upperCamelCase"
+
+Toujours faire en sorte que le nom du fichier soit identique au nom de la classe. 
+ici Ecole.php --> class Ecole {}
+
+ATELIER : 
+En vous appuyant sur le travail effectuer dans la matinée et en début d'apres-midi: 
+
+1. Créer les classes "Classe" et "Eleve"
+2. Pour chaque classe vous allez mettre en place: 
+    - les propriétés
+    - les getters
+    - les setters 
+    - le constructeur
+3. Dans votre fichier index.php vous allez créer 3 Classes de votre choix et 6 Eleves. 
+4. En vous aidant de la fonction "var_dump" vous afficherez le nom des 3 classes sur votre page dans une balises h3. 
+5. Puis, vous afficherez le sexe, le prenom et le nom des élèves dans un paragraphe. 
+
+BONUS : Mettre en place un nouveau repository GIT ; et publier le code d'aujourd'hui sur votre compte GitHub en vous aidant de GitHubDesktop
