@@ -55,7 +55,7 @@ class Classe{
     }
 
     public function getClass() {
-        return get_class();
+        return getClass();
     }
 
     // Récuperer la liste des élèves de la classe 
@@ -64,11 +64,10 @@ class Classe{
     }
 
     // Permet d'ajouter un élève à la "classe"
-    public function ajouterUnEleve($eleve){
+    // en mettant la classe Eleve devant ma variable $eleve je dis à php que ma variable doit etre de mon objet (cela permet d'eviter d'avoir des variable non conforme). 
+    public function ajouterUnEleve(Eleve $eleve){
         $this->eleves[] = $eleve; 
     }
-
-
 
 }
 
