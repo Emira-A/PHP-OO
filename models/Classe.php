@@ -1,16 +1,17 @@
 <?php
+// Atelier Ex. 1 et 2
 
 class Classe{
     private $nom; 
     private $niveau; 
-    private $instituteur_principal; 
+    private $institeurPrincipal; 
     private $effectif; 
 
      //  ---- CONSTRUCTEUR ---- 
-     public function __construct($nom, $niveau, $instituteur_principal, $effectif){
+     public function __construct($nom, $niveau, $institeurPrincipal, $effectif){
         $this->nom = $nom;
         $this->niveau = $niveau;
-        $this->instituteur_principal= $instituteur_principal; 
+        $this->institeurPrincipal= $institeurPrincipal; 
         $this->effectif = $effectif;
      }
 
@@ -24,8 +25,8 @@ class Classe{
         $this->niveau = $niveau; 
     }
 
-    public function setInstituteurPrincipal($instituteur_principal){
-        $this->instituteur_principal = $instituteur_principal; 
+    public function setInstituteurPrincipal($institeurPrincipal){
+        $this->institeurPrincipal = $institeurPrincipal; 
     }
 
     public function setEffectif($effectif){
@@ -42,7 +43,7 @@ class Classe{
     }
 
     public function getInstituteurPrincipal(){
-        return $this->instituteur_principal; 
+        return $this->institeurPrincipal; 
     }
 
     public function getEffectif(){

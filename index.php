@@ -72,13 +72,12 @@ $eleve6 = new Eleve('f', 'Morgane', 'Ham', '17');
 echo '<pre>';
 print_r($ecole); 
 print_r($ecole2); 
+// Print_r de l'ex. 3
 print_r($classe2);
 print_r($eleve2);
 print_r($eleve6);
 var_dump($classe1);
 echo '</pre>';
-
-// var_dump($classe1);
 
 // Je souhaite afficher le nom de l'école 
 echo "<h1>{$ecole->getNom()}</h1>"; // les {} permet d'exprimer l'expression dans son intégralité
@@ -94,10 +93,20 @@ echo "<h1>{$ecole2->getNom()}</h1>";
 echo "<p>{$ecole2->getAdresse()}</p>";
 echo "<p>{$ecole2->getResponsable()}</p>";
 
-// 4. En vous aidant de la fonction "var_dump", vous afficherez le nom des 3 classes sur votre page dans une balises h3. 
+// Atelier Ex. 4
+// Var_Dump
+var_dump("<h3>{$classe1->getNom()}</h3>"); 
+var_dump("<h3>{$classe2->getNom()}</h3>");
+var_dump("<h3>{$classe3->getNom()}</h3>");
+// Affichage echo
 echo "<h3>Les classes {$classe1->getNom()}, {$classe2->getNom()} et {$classe3->getNom()} sont de sortie !</h3>";
 
-// 5. Puis, vous afficherez le sexe, le prenom et le nom des élèves dans un paragraphe. 
+// Atelier Ex. 5
 echo "<p>Les élèves sont : <br> {$eleve1->getSexe()}, {$eleve1->getPrenom()}, {$eleve1->getNom()} <br> {$eleve2->getSexe()},{$eleve2->getPrenom()}, {$eleve2->getNom()} <br> {$eleve3->getSexe()}, {$eleve3->getPrenom()}, {$eleve3->getNom()} <br> {$eleve4->getSexe()}, {$eleve4->getPrenom()}, {$eleve4->getNom()} <br> {$eleve5->getSexe()}, {$eleve5->getPrenom()}, {$eleve5->getNom()} <br> {$eleve6->getSexe()}, {$eleve6->getPrenom()}, {$eleve6->getNom()} </p>";
 
+// echo de hetInfos qui contient le getSexe, getNom, getPrenom et getAge. 
+echo $eleve1->getInfos();
+echo $eleve2->getInfos();
+echo $eleve3->getInfos();
+echo $eleve4->getInfos();
 

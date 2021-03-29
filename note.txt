@@ -18,3 +18,11 @@ En vous appuyant sur le travail effectuer dans la matinée et en début d'apres-
 5. Puis, vous afficherez le sexe, le prenom et le nom des élèves dans un paragraphe. 
 
 BONUS : Mettre en place un nouveau repository GIT ; et publier le code d'aujourd'hui sur votre compte GitHub en vous aidant de GitHubDesktop
+
+lowerUpperCamelCase pour $institeurPrincipal première lettre en minuscule 2eme mots avec 1 ere lettre majuscule 
+Donc pas mettre $instituteur_principal mais $institeurPrincipal dans la class Classe
+
+Correction class Class : http://sharemycode.fr/8j4
+Correction class Eleve : http://sharemycode.fr/5yy
+Correction Index : http://sharemycode.fr/yb1
+

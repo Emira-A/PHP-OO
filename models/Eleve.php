@@ -1,4 +1,5 @@
 <?php
+// Atelier Ex. 1 et 2
 
 class Eleve{
 
@@ -50,4 +51,15 @@ class Eleve{
         return $this->age; 
     }
 
+    // getInfos pour créer une fonction qui contient plusieurs get dans une, permet de raccourcir le code dans index
+    public function getInfos(){
+    return "
+        <p>
+            <em>({$this->getSexe()})</em> 
+            {$this->getPrenom()} 
+            {$this->getNom()} : 
+            {$this->getAge()}
+        </p>
+    ";
+    }
 }
