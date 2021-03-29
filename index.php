@@ -104,9 +104,88 @@ echo "<h3>Les classes {$classe1->getNom()}, {$classe2->getNom()} et {$classe3->g
 // Atelier Ex. 5
 echo "<p>Les élèves sont : <br> {$eleve1->getSexe()}, {$eleve1->getPrenom()}, {$eleve1->getNom()} <br> {$eleve2->getSexe()},{$eleve2->getPrenom()}, {$eleve2->getNom()} <br> {$eleve3->getSexe()}, {$eleve3->getPrenom()}, {$eleve3->getNom()} <br> {$eleve4->getSexe()}, {$eleve4->getPrenom()}, {$eleve4->getNom()} <br> {$eleve5->getSexe()}, {$eleve5->getPrenom()}, {$eleve5->getNom()} <br> {$eleve6->getSexe()}, {$eleve6->getPrenom()}, {$eleve6->getNom()} </p>";
 
-// echo de hetInfos qui contient le getSexe, getNom, getPrenom et getAge. 
+// echo de getInfos qui contient le getSexe, getNom, getPrenom et getAge. 
 echo $eleve1->getInfos();
 echo $eleve2->getInfos();
 echo $eleve3->getInfos();
 echo $eleve4->getInfos();
+
+// Problématique du Lundi
+// Comment faire pour affecter chaque élève dans une classe ? 
+// On a ajouter un valeur dans le fichier Classe et on a crée une fonction avec la valeurs "eleves" définie comme un tableau. Puis on affecte 2 elèves dans la classe 1 
+$classe1->ajouterUnEleve($eleve3); 
+$classe1->ajouterUnEleve($eleve4); 
+
+$classe2->ajouterUnEleve($eleve1);
+$classe2->ajouterUnEleve($eleve5);
+
+$classe3->ajouterUnEleve($eleve2); 
+
+echo '<pre>'; 
+print_r($classe1); 
+echo '</pre>'; 
+
+// Comment faire pour affecter chaque classe dans une école ? 
+$ecole2->ajouterUneClasse($classe2);
+$ecole2->ajouterUneClasse($classe3);
+
+$ecole->ajouterUneClasse($classe1); 
+
+echo '<pre>'; 
+print_r($ecole2); 
+print_r($ecole); 
+echo '</pre>'; 
+
+// Comment à partir de l'école, je peux extraire mes données ? 
+/* --
+    CONSIGNE : En partant de l'objet $ecole ; affichez la liste
+    ol, ul, li des classes et pour chaque classes les étudiants.
+    nom de la classe en ul 
+    nom de l'eleve en li 
+    parcourir la liste des classes 
+    puis la liste des eleves
+    une boucle dans une boucle 
+
+    Plus difficile : avec un tableau HTML. 
+-- */
+
+$contenu = '<ol>'; 
+
+// Récupétation des classes
+$classes = $ecole2->getClasses();
+
+echo'<ol>'; 
+// Je parcours mes classes
+foreach($classes as $classe){
+    // vérification que tout fonctionne
+    // var_dump($classe2); 
+
+    // Afficher le nom de la classe
+    $contenu .= '<li>'; 
+    $contenu .= $classe->getNom(); 
+    $contenu .= '</li>'; 
+
+    // Récupérer les élèves de ma classe 
+    $eleves = $classe->getEleves(); 
+
+    // Je parcours mes élèves
+    $contenu .= '<ul>'; 
+
+    foreach ($eleves as $eleve){
+        $contenu .= '<li>'; 
+        $contenu .= $eleve->getPrenom() . ' ' . $eleve->getNom(); 
+        $contenu .= '</li>'; 
+    } // fin de foreach ($eleves)
+
+    $contenu .= '</ul>'; 
+
+} // fin de la foreach
+$contenu .='</ol>'; 
+
+// On affiche le contenu
+echo $contenu; 
+
+
+
+
 

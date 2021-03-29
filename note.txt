@@ -26,3 +26,17 @@ Correction class Class : http://sharemycode.fr/8j4
 Correction class Eleve : http://sharemycode.fr/5yy
 Correction Index : http://sharemycode.fr/yb1
 
+Problématique 
+Comment faire pour affecter chaque élève dans une classe ? 
+Comment faire pour affecter chaque classe dans une école ? 
+On crée nos fontions uniquement dans getters et pas dans setters
+// Récuperer la liste des élèves de la classe 
+    public function getEleves(){
+        return $this->eleves; 
+    }
+
+    // Permet d'ajouter un élève à la "classe"
+    public function ajouterUnEleve($eleve){
+        $this->eleves[] = $eleve; 
+
+Correction : http://sharemycode.fr/38i

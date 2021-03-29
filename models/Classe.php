@@ -6,6 +6,8 @@ class Classe{
     private $niveau; 
     private $institeurPrincipal; 
     private $effectif; 
+    // Problématique de Lundi
+    private $eleves; // ce sera un tableau 
 
      //  ---- CONSTRUCTEUR ---- 
      public function __construct($nom, $niveau, $institeurPrincipal, $effectif){
@@ -13,6 +15,7 @@ class Classe{
         $this->niveau = $niveau;
         $this->institeurPrincipal= $institeurPrincipal; 
         $this->effectif = $effectif;
+        $this->eleves = []; // [] car c'est un tableau vide
      }
 
 
@@ -32,6 +35,7 @@ class Classe{
     public function setEffectif($effectif){
         $this->effectif = $effectif; 
     }
+
 
     //  ---- GETTERS ---- 
     public function getNom(){ 
@@ -54,6 +58,15 @@ class Classe{
         return get_class();
     }
 
+    // Récuperer la liste des élèves de la classe 
+    public function getEleves(){
+        return $this->eleves; 
+    }
+
+    // Permet d'ajouter un élève à la "classe"
+    public function ajouterUnEleve($eleve){
+        $this->eleves[] = $eleve; 
+    }
 
 
 

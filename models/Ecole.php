@@ -18,6 +18,8 @@ class Ecole{
     private $adresse; 
     private $type; 
     private $responsable; 
+    // Problématique de Lundi
+    private $classes; 
 
      //  ---- CONSTRUCTEUR ---- 
 
@@ -43,6 +45,7 @@ class Ecole{
         $this->adresse = $adresse;
         $this->type = $type; 
         $this->responsable = $responsable;
+        $this->classes = []; // ce sera un tableau
      }
 
 
@@ -84,6 +87,16 @@ class Ecole{
 
     public function getResponsable(){
         return $this->responsable; 
+    }
+
+    // Récuperer la liste des classes de l'école
+    public function getClasses(){
+        return $this->classes; 
+    }
+
+    // Permet d'ajouter une classe dans le tableau 
+    public function ajouterUneClasse($classe){
+        $this->classes[] = $classe; 
     }
 
 };
